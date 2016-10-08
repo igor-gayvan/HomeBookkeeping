@@ -47,9 +47,9 @@
                 <c:forEach var="doc" items="${docs}">
                     <tr>
                         <td><fmt:formatDate pattern="dd.MM.yyyy HH:mm:ss" value="${doc.docDate}" /></td>
-                        <td>${doc.docAmount}</td>
-                        <td>${doc.isIncome}</td>
-                        <td>${doc.docNote}</td>
+                        <td><c:out value="${doc.docAmount}" /></td>
+                        <td><c:out value="  ${doc.isIncome}" /></td>
+                        <td><c:out value="${doc.docNote}" /></td>
                         <td><a href="index?edit=${doc.docId}">Edit</a></td>
                         <td><a href="index?remove=${doc.docId}">Remove</a></td>
                     </tr>
